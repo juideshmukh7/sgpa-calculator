@@ -1,6 +1,7 @@
 let department = "";
 let subjects = [];
 
+//clears the input value when you reload the webpage
 window.onload = function(){
 
     document.querySelectorAll("input").forEach(input => {
@@ -10,6 +11,41 @@ window.onload = function(){
 };
 
 
+//moves cursor immediately to next subject once you click enter
+document.querySelectorAll("input").forEach((input, index, inputs) => {
+
+    input.addEventListener("keydown", function(event){
+
+        if(event.key === "Enter"){
+            event.preventDefault();
+
+            if(index + 1 < inputs.length){
+                inputs[index + 1].focus();
+            }
+        }
+
+    });
+
+});
+
+//gives alert immediately when invalid number is entered
+document.querySelectorAll("input").forEach(input => {
+
+    input.addEventListener("input", function(){
+
+        let value = parseFloat(this.value);
+
+        if(value < 0 || value > 100){
+            alert("Marks must be between 0 and 100");
+            this.value = "";
+            this.focus();
+        }
+
+    });
+
+});
+
+//conversion of percentage to pointer
 function toPointer(mark){
     if(mark > 100 || mark < 0){
         alert("Marks must be between 0 and 100");
@@ -47,6 +83,7 @@ function toPointer(mark){
     
 }
 
+
 function showTable(dep){
     document.querySelectorAll("input").forEach(input => {
         input.value = "";
@@ -56,7 +93,8 @@ function showTable(dep){
     department = dep;
 
     document.querySelector(".container").style.display = "block";
-
+    
+    //initially hides table unless department is selected
     document.getElementById("ceTable").style.display = "none";
     document.getElementById("itTable").style.display = "none";
     document.getElementById("entcTable").style.display = "none";
