@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <title>Hehe</title>
+    <link rel="icon" type="image/x-icon" href="https://plus.unsplash.com/premium_vector-1742626219492-8d8c3463ec87?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+  
+
+    <style>
+        body
+        {
+            background-image: url("https://images.unsplash.com/photo-1677443181136-084257a0af67?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position-y: bottom;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        h1{
+            text-align:center;
+            color:#4b0082;
+            font-size:42px;
+            letter-spacing:2px;
+        }
+
+        h2
+        {
+            font-size: 100%;
+            text-align: center;
+        }
+
+        table{
+            margin: auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td{
+            padding: 8px;
+            text-align: center;
+        }
+
+        th{
+            background-color: rgba(255,255,255,0.4);
+        }
+        
+        tr:hover{
+            background-color:rgba(255,255,255,0.3);
+        }
+
+        
+        .container{
+            text-align: center;
+            margin: 30px auto;
+            padding: 25px;
+            width: 450px;
+            max-width: 90%;
+
+
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .dept-buttons{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-top:20px;
+        }
+
+        input{
+            width:60px;
+            padding:5px;
+            border-radius:5px;
+            border:1px solid #ccc;
+            text-align:center;
+        }
+
+        input:focus{
+            outline:none;
+            border-color:#8a2be2;
+            box-shadow:0 0 5px rgba(138,43,226,0.5);
+        }
+
+
+        button{
+            padding: 8px 16px;
+            background-color: rgb(255, 214, 163);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover{
+            background-color: rgb(255, 190, 120);
+            transform: scale(1.05);
+        }
+       
+
+        /* script
+        {
+            text-align: center;
+        } */
+    </style>
+
+
+</head>
+<body>
+    
+     <h1>SGPA calculator</h1>    
+    
+    <!--<p>Enter your marks out of 500</p>--> 
+     <h2>Select Department</h2>
+    
+     
+        <div class="dept-buttons">
+            <button onclick="showTable('CE')">Computer Engineering</button>
+            <button onclick="showTable('IT')">Information Technology</button>
+            <button onclick="showTable('ENTC')">Electronics & Telecommunication</button>
+            <button onclick="showTable('AIDS')">Artificial Intelligence & Data Science</button>
+            <button onclick="showTable('ECE')">Electronics & Computer Engineering</button>
+        </div>
+
+     
+ <div class="container" style="display:none;">
+
+<!-- CE TABLE -->
+    <table id="ceTable" style="display:none;">
+        <tr>
+            <th>Subject</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr><td>SE</td><td><input type="number" id="se"></td></tr>
+        <tr><td>DMS</td><td><input type="number" id="dms"></td></tr>
+        <tr><td>DMSL</td><td><input type="number" id="dmsl"></td></tr>
+        <tr><td>OS</td><td><input type="number" id="os"></td></tr>
+        <tr><td>OSL</td><td><input type="number" id="osl"></td></tr>
+        <tr><td>PBL</td><td><input type="number" id="pbl"></td></tr>
+        <tr><td>EP</td><td><input type="number" id="ep"></td></tr>
+        <tr><td>EPL</td><td><input type="number" id="epl"></td></tr>
+        <tr><td>CDC</td><td><input type="number" id="cdc"></td></tr>
+        <tr><td>ICSR</td><td><input type="number" id="icsr"></td></tr>
+        <tr><td>CEP</td><td><input type="number" id="cep"></td></tr>
+        <tr><td>MDM-2</td><td><input type="number" id="mdm2"></td></tr>
+        <tr><td>MDM-2 LAB</td><td><input type="number" id="mdm2l"></td></tr>
+        <tr><td>OE</td><td><input type="number" id="oe"></td></tr>
+
+    </table>
+
+    <!-- IT TABLE -->
+    <table id="itTable" style="display:none;">
+        <tr>
+            <th>Subject</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr><td>ADSA</td><td><input type="number" id="adsa"></td></tr>
+        <tr><td>DIS</td><td><input type="number" id="dis"></td></tr>
+        <tr><td>DSM</td><td><input type="number" id="dsm"></td></tr>
+        <tr><td>ADSAL</td><td><input type="number" id="adsal"></td></tr>
+        <tr><td>DISL</td><td><input type="number" id="disl"></td></tr>
+        <tr><td>MDM-2</td><td><input type="number" id="mdm2"></td></tr>
+        <tr><td>MDM-2 Lab</td><td><input type="number" id="mdm2l"></td></tr>
+        <tr><td>OE</td><td><input type="number" id="oe"></td></tr>
+        <tr><td>PBL</td><td><input type="number" id="pbl"></td></tr>
+        <tr><td>CDC</td><td><input type="number" id="cdc"></td></tr>
+        <tr><td>IPSE</td><td><input type="number" id="ipse"></td></tr>
+        <tr><td>ICSR</td><td><input type="number" id="icsr"></td></tr>
+        <tr><td>CEP</td><td><input type="number" id="cep"></td></tr>
+
+    </table>
+
+    <!-- ENTC TABLE -->
+    <table id="entcTable" style="display:none;">
+        <tr>
+            <th>Subject</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr><td>PCE</td><td><input type="number" id="pce"></td></tr>
+        <tr><td>PCEL</td><td><input type="number" id="pcel"></td></tr>
+        <tr><td>DCD</td><td><input type="number" id="dcd"></td></tr>
+        <tr><td>DCDL</td><td><input type="number" id="dcdl"></td></tr>
+        <tr><td>CS</td><td><input type="number" id="cs"></td></tr>
+        <tr><td>PBL</td><td><input type="number" id="pbl"></td></tr>
+        <tr><td>PMFE</td><td><input type="number" id="pmfe"></td></tr>
+        <tr><td>MDM-2</td><td><input type="number" id="mdm2"></td></tr>
+        <tr><td>MDM-2 LAB</td><td><input type="number" id="mdm2l"></td></tr>
+        <tr><td>OE</td><td><input type="number" id="oe"></td></tr>
+        <tr><td>CDC</td><td><input type="number" id="cdc"></td></tr>
+        <tr><td>ICSR</td><td><input type="number" id="icsr"></td></tr>
+        <tr><td>CEP</td><td><input type="number" id="cep"></td></tr>
+
+    </table>
+
+    <!-- AIDS TABLE -->
+    <table id="aidsTable" style="display:none;">
+        <tr>
+            <th>Subject</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr><td>ML</td><td><input type="number" id="ml"></td></tr>
+        <tr><td>DBMS</td><td><input type="number" id="dbms"></td></tr>
+        <tr><td>OS</td><td><input type="number" id="os"></td></tr>
+        <tr><td>FCN</td><td><input type="number" id="fcn"></td></tr>
+        <tr><td>LP1</td><td><input type="number" id="lp1"></td></tr>
+        <tr><td>KSEL</td><td><input type="number" id="ksel"></td></tr>
+        <tr><td>MDM-2</td><td><input type="number" id="mdm"></td></tr>
+        <tr><td>MDM-2 Lab</td><td><input type="number" id="mdm2l"></td></tr>
+        <tr><td>OE</td><td><input type="number" id="oe"></td></tr>
+        <tr><td>CDC</td><td><input type="number" id="cdc"></td></tr>
+        <tr><td>PM</td><td><input type="number" id="pm"></td></tr>
+        <tr><td>ICSR</td><td><input type="number" id="icsr"></td></tr>
+        <tr><td>CEP</td><td><input type="number" id="cep"></td></tr>
+
+    </table>
+
+
+    <!-- ECE TABLE -->
+    <table id="eceTable" style="display:none;">
+        <tr>
+            <th>Subject</th>
+            <th>Percentage</th>
+        </tr>
+
+        <tr><td>ADC</td><td><input type="number" id="adc"></td></tr>
+        <tr><td>MA</td><td><input type="number" id="ma"></td></tr>
+        <tr><td>ECEL1</td><td><input type="number" id="ecel1"></td></tr>
+        <tr><td>OOP</td><td><input type="number" id="oop"></td></tr>
+        <tr><td>OOPL</td><td><input type="number" id="oopl"></td></tr>
+        <tr><td>PBL</td><td><input type="number" id="pbl"></td></tr>
+        <tr><td>ISPM</td><td><input type="number" id="ispm"></td></tr>
+        <tr><td>MDM-2</td><td><input type="number" id="mdm2"></td></tr>
+        <tr><td>MDM-2 LAB</td><td><input type="number" id="mdm2l"></td></tr>
+        <tr><td>OE</td><td><input type="number" id="oe"></td></tr>
+        <tr><td>CDC</td><td><input type="number" id="cdc"></td></tr>
+        <tr><td>ICSR</td><td><input type="number" id="icsr"></td></tr>
+        <tr><td>CEP</td><td><input type="number" id="cep"></td></tr>
+
+    </table>
+
+<button onclick="calculate()">Submit</button>
+
+<p id="result"></p>
+
+</div>
+
+
+
+<!--
+  <div class="container">
+
+     <label>Marks:</label><br>
+     <input type="number" id="marks"><br>
+  
+     <button onclick="calculate()">submit</button>
+
+     <p id="result"></p>
+
+  </div>   
+    
+    
+     <script>
+        function calculate(){
+            let marks = document.getElementById("marks").value;
+
+            let final = (marks/500)*100;
+
+            document.getElementById("result").innerText = "Percentage:" + final;
+
+        }
+    </script>
+-->
+
+    <script src="script.js"></script>
+
+    
+
+</body>
+</html>
